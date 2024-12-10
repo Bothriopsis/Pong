@@ -31,13 +31,13 @@ To start the game, run the `main.py` file:
 python
 ```
 
-##  game-controls
-# Player 1 (Left Bar)
+## game-controls
+### Player 1 (Left Bar)
 - Move Up: W
 - Move Down: S
-# Player 2 (Right Bar)
+### Player 2 (Right Bar)
 - Move Up: Up Arrow
 - Move Down: Down Arrow
-# General
+### General
 - Start Game: Space
 - Quit Game: Escape
