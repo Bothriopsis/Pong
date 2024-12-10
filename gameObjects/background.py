@@ -2,7 +2,7 @@ import pygame
 
 class Background:
     def __init__(self):
-        self.color = "#F1828D"
+        self.color = "#f7f7ee"
     
     def draw(self, screen):
         screen.fill(self.color)

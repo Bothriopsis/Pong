@@ -7,7 +7,7 @@ class Ball:
         self.x = self.__SCREEN_WIDTH/2
         self.y = self.__SCREEN_HEIGHT/2
         self.radius = self.__SCREEN_WIDTH/50
-        self.color = "#765d69"
+        self.color = "#fcd783"
         self.dx = 5
         self.dy = -5
 
