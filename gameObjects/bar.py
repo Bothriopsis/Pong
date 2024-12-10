@@ -21,3 +21,10 @@ class Bar:
             self.y -= self.dy
         if keys[down]:
             self.y += self.dy
+    
+    def collision(self, other):
+        if self.rect.colliderect(other.rect):
+            if abs(self.rect.top - other.rect.bottom) <= abs(other.dy) or abs(self.rect.bottom - other.rect.top) <= abs(other.dy):
+                other.dy = -other.dy
+            if abs(self.rect.left - other.rect.right) <= abs(other.dy) or abs(self.rect.right - other.rect.left) <= abs(other.dy):
+                other.dx = -other.dx
