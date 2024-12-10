@@ -8,7 +8,7 @@ class Ball:
         self.x = self.__SCREEN_WIDTH/2
         self.y = self.__SCREEN_HEIGHT/2
         self.radius = self.__SCREEN_WIDTH/50
-        self.color = "#4AC8ED"
+        self.color = "#cec0d0"
         self.dx = random.choice([random.randint(2,4), random.randint(-4,-2)])
         self.dy = random.choice([random.randint(2,4), random.randint(-4,-2)])
 

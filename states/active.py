@@ -17,8 +17,8 @@ class ActiveGame:
         self.clock = pygame.time.Clock()
 
         self.ball = Ball()
-        self.bar_left = Bar(SCREEN_WIDTH/10,SCREEN_HEIGHT/2, pygame.Color("#D9B400"))
-        self.bar_right = Bar((9/10)*SCREEN_WIDTH,SCREEN_HEIGHT/2, "#B58845")
+        self.bar_left = Bar(SCREEN_WIDTH/10,SCREEN_HEIGHT/2, pygame.Color("#506d9a"))
+        self.bar_right = Bar((9/10)*SCREEN_WIDTH,SCREEN_HEIGHT/2, "#3c3c56")
         self.background = Background()
         self.active = True
 
