@@ -12,8 +12,8 @@ class Game:
     clock = pygame.time.Clock()
 
     ball = Ball()
-    bar_left = Bar(SCREEN_WIDTH/10,SCREEN_HEIGHT/2, "green")
-    bar_right = Bar((9/10)*SCREEN_WIDTH,SCREEN_HEIGHT/2, "red")
+    bar_left = Bar(SCREEN_WIDTH/10,SCREEN_HEIGHT/2, pygame.Color("#FEFAD4"))
+    bar_right = Bar((9/10)*SCREEN_WIDTH,SCREEN_HEIGHT/2, "#FCD0BA")
     background = Background()
     
     def __init__(self):
