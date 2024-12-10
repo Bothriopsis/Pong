@@ -14,11 +14,12 @@ class Game:
     def run(self):
         mainScreen = MainScreen()
         activeGame = ActiveGame()
+        activeGame.properties()
         while self.running:
             if mainScreen.active:
-                mainScreen.run()
+                mainScreen.run(activeGame)
             if activeGame.active:
-                activeGame.run()
+                activeGame.run(mainScreen)
             if activeGame.running == False or mainScreen.running == False:
                 self.running = False
         pygame.quit()

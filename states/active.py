@@ -6,23 +6,30 @@ import pygame
 
 class ActiveGame:
     pygame.init()
-    SCREEN_WIDTH = pygame.display.Info().current_w
-    SCREEN_HEIGHT = pygame.display.Info().current_h
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    clock = pygame.time.Clock()
-
-    ball = Ball()
-    bar_left = Bar(SCREEN_WIDTH/10,SCREEN_HEIGHT/2, pygame.Color("#D9B400"))
-    bar_right = Bar((9/10)*SCREEN_WIDTH,SCREEN_HEIGHT/2, "#B58845")
-    background = Background()
-    
     def __init__(self):
         self.running = True
         self.active = False
+    
+    def properties(self):
+        SCREEN_WIDTH = pygame.display.Info().current_w
+        SCREEN_HEIGHT = pygame.display.Info().current_h
+        self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+        self.clock = pygame.time.Clock()
 
-    def run(self):
-        while self.running:
+        self.ball = Ball()
+        self.bar_left = Bar(SCREEN_WIDTH/10,SCREEN_HEIGHT/2, pygame.Color("#D9B400"))
+        self.bar_right = Bar((9/10)*SCREEN_WIDTH,SCREEN_HEIGHT/2, "#B58845")
+        self.background = Background()
+        self.active = True
+
+
+    def run(self, other):
+        while self.active:
             keys = pygame.key.get_pressed()
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT or keys[pygame.K_ESCAPE]:
+                    self.running = False
+                    self.active = False
             self.background.draw(self.screen)
             self.ball.draw(self.screen)
             self.bar_left.draw(self.screen)
@@ -37,10 +44,11 @@ class ActiveGame:
                     self.background.left_won(self.screen, self.bar_left, self.bar_right)
                     if keys[pygame.K_SPACE]:
                         self.active = False
+                        other.active = True
                 if self.ball.won() == "right":
                     self.background.right_won(self.screen, self.bar_left, self.bar_right)
                     if keys[pygame.K_SPACE]:
                         self.active = False
+                        other.active = True
             pygame.display.flip()
             self.clock.tick(165)
-        pygame.quit()
