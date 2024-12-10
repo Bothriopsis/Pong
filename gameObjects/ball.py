@@ -9,8 +9,8 @@ class Ball:
         self.y = self.__SCREEN_HEIGHT/2
         self.radius = self.__SCREEN_WIDTH/50
         self.color = "#a3d8d8"
-        self.dx = random.choice([random.randint(2,8), random.randint(-8,-2)])
-        self.dy = random.choice([random.randint(2,8), random.randint(-8,-2)])
+        self.dx = random.choice([random.randint(2,6), random.randint(-6,-2)])
+        self.dy = random.choice([random.randint(1,4), random.randint(-4,-1)])
 
     def draw(self, screen):
         self.rect = pygame.Rect(self.x, self.y, self.radius, self.radius)
