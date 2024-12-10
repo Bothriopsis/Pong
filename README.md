@@ -13,7 +13,7 @@ This is a classic Pong game implemented using Python and Pygame. The game includ
 
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
+    git clone <https://github.com/Bothriopsis/Pong.git>
     ```
 2. Navigate to the project directory:
     ```sh
