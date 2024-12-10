@@ -7,8 +7,7 @@ This is a classic Pong game implemented using Python and Pygame. The game includ
 - [Installation](#installation)
 - [Usage](#usage)
 - [Game Controls](#game-controls)
-- [Game Structure](#game-structure)
-- [License](#license)
+
 
 ## Installation
 
@@ -29,4 +28,16 @@ This is a classic Pong game implemented using Python and Pygame. The game includ
 
 To start the game, run the `main.py` file:
 ```sh
-python 
+python
+```
+
+##  game-controls
+# Player 1 (Left Bar)
+- Move Up: W
+- Move Down: S
+# Player 2 (Right Bar)
+- Move Up: Up Arrow
+- Move Down: Down Arrow
+# General
+- Start Game: Space
+- Quit Game: Escape
